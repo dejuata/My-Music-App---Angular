@@ -1,0 +1,12 @@
+@import 'base/variables';
+@import 'mixins';
+
+.o-track-list-container {
+
+  @include from($medium) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-gap: 30px 20px;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="m-track-detail">
+  <figure class="m-track-detail__image">
+    <img [src]="track.image" [alt]="track.album" />
+  </figure>
+
+  <div class="m-track-detail__body">
+    <div class="m-track-detail__body-title">
+      <h2>{{ track.name }}</h2>
+      <p>{{ track.artists }}</p>
+    </div>
+
+    <div class="m-track-detail__body-info">
+      <p>
+        This song belongs to the Album
+        <strong>{{ track.album }}</strong> released on {{ track.album }}.
+      </p>
+      <p><strong>Duration: </strong>{{ track.duration }} min.</p>
+    </div>
+
+    <div class="m-track-detail__body-footer">
+      <app-spotify-button></app-spotify-button>
+    </div>
+  </div>
+</div>

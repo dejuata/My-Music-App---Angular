@@ -1,0 +1,45 @@
+.btn {
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-size: $font-sm;
+  font-weight: bold;
+  padding: 15px 5px;
+  text-align: center;
+  transition: color .3 ease;
+  width: 100%;
+
+  &:focus {
+      outline: none;
+  }
+
+  &:hover {
+      color: darken($color: white, $amount: 10);
+  }
+}
+
+.btn-primary {
+  background-color: $color-green;
+  border-radius: 8px;
+
+  &:disabled {
+      background-color: lighten($color: $color-green, $amount: 15);
+  }
+
+  &:hover {
+      background-color: darken($color: $color-green, $amount: 15);
+  }
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid $color-green;
+  color: $color-green;
+
+  &:hover {
+      background-color: $color-green;
+  }
+}

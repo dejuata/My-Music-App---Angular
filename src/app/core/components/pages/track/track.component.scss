@@ -1,0 +1,10 @@
+@import 'base/variables';
+@import 'mixins';
+
+.track-container {
+
+  @include from($medium) {
+    margin: 0 auto;
+    width: 80%;
+  }
+}

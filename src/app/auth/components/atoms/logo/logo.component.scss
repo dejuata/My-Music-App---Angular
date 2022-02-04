@@ -1,0 +1,38 @@
+@import 'base/variables';
+
+.a-logo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  &__image {
+    align-items: center;
+    background-color: $color-white;
+    border-radius: 50%;
+    display: flex;
+    height: 120px;
+    justify-content: center;
+    width: 120px;
+
+    img {
+      box-sizing: border-box;
+      height: 90px;
+      min-height: 40px;
+      min-width: 40px;
+      padding: 2px;
+      width: 90px;
+    }
+  }
+
+  &__title {
+    font-size: $font-xlg;
+    font-weight: bold;
+    margin: 0.5rem 0 0;
+  }
+}
+
+
+
+

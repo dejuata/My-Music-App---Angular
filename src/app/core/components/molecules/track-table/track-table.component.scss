@@ -1,0 +1,35 @@
+@import 'base/variables';
+@import 'mixins';
+
+.m-track-table {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 16px 0;
+
+  &__heading {
+    align-items: center;
+    color: $color-input-field;
+    display: grid;
+    font-size: $font-md;
+    grid-template-columns: 10% 70% 20%;
+    height: 42px;
+    justify-items: center;
+    text-transform: uppercase;
+
+    &-number {
+      font-style: italic;
+    }
+
+    &-title {
+      width: 45%;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      justify-self: flex-start;
+      margin-left: 16px;
+    }
+
+    &-duration {
+      justify-self: flex-end;
+    }
+  }
+}

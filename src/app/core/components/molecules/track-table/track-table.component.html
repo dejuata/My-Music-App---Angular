@@ -1,0 +1,12 @@
+<div class="m-track-table">
+  <div class="m-track-table__heading">
+    <div class="m-track-table__heading-number">#</div>
+
+    <div class="m-track-table__heading-title">Song</div>
+    <div class="m-track-table__heading-duration">
+      <fa-icon [icon]="faClock"></fa-icon>
+    </div>
+  </div>
+
+  <app-track-table-row *ngFor="let track of tracks"></app-track-table-row>
+</div>

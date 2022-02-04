@@ -1,0 +1,18 @@
+<div class="m-card-track animate__animated animate__fadeIn">
+  <div class="m-card-track__body">
+    <a routerLink="/track">
+      <figure class="m-card-track__body-image">
+        <img [src]="track.image" [alt]="track.album" />
+      </figure>
+      <div class="m-card-track__body-detail">
+        <p>{{ track.name_short }}</p>
+        <p>{{ track.artists }}</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="m-card-track__footer">
+    <span>{{ track.duration }}</span>
+    <app-favorite-button></app-favorite-button>
+  </div>
+</div>

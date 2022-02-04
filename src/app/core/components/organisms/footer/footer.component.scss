@@ -1,0 +1,28 @@
+@import 'base/variables';
+
+.o-footer {
+  background-color: $color-white;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+
+  &__nav {
+    align-items: center;
+    color: $color-dark;
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+
+    li {
+      cursor: pointer;
+      width: 50px;
+      text-align: center;
+
+      fa-icon {
+        color: $color-green;
+      }
+    }
+  }
+}

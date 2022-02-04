@@ -1,0 +1,21 @@
+
+@import 'base/variables';
+
+.a-favorite-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+
+  &__icon {
+    color: #AAB8C2;
+    transition: color .3s ease;
+    font-size: $font-xlg;
+
+    &--active {
+      color: #E2264D;
+    }
+  }
+}

@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  logoUrl: 'https://res.cloudinary.com/dnat0jmou/image/upload/v1643209622/logo_cpghqu.png'
 };
 
 /*
