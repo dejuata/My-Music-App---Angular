@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Track } from '@app/models/track.model';
 
 @Component({
   selector: 'app-track-list',
@@ -7,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrackListComponent implements OnInit {
 
+  @Input() tracks: Track[] = [];
+  // tracks = new Array(50)
 
-  tracks = new Array(50)
+  constructor() {
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
+    // console.log('track-list', this.tracks)
   }
 
 }

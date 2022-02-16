@@ -22,10 +22,14 @@ const routes: Routes = [
       {
         path: 'track',
         component: TrackComponent
-      }
-
+      },
+      // {
+      //   path: '**',
+      //   redirectTo: ''
+      // }
     ]
-  }
+  },
+
 ];
 
 @NgModule({

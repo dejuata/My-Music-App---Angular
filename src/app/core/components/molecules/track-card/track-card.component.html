@@ -5,14 +5,15 @@
         <img [src]="track.image" [alt]="track.album" />
       </figure>
       <div class="m-card-track__body-detail">
-        <p>{{ track.name_short }}</p>
+        <p>{{ track.name | truncateString: 15 }}</p>
         <p>{{ track.artists }}</p>
       </div>
     </a>
   </div>
 
   <div class="m-card-track__footer">
-    <span>{{ track.duration }}</span>
-    <app-favorite-button></app-favorite-button>
+    <span>{{ track.duration | formatDuration }}</span>
+    <!-- <app-favorite-button></app-favorite-button> -->
+    <button (click)="setFavorite()">💚</button>
   </div>
 </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Track } from '@core/models/track.model';
+import { Track } from '@app/models/track.model';
 
 @Component({
   selector: 'app-track-detail',
@@ -8,7 +8,7 @@ import { Track } from '@core/models/track.model';
 })
 export class TrackDetailComponent implements OnInit {
 
-  track: Track = {
+  track = {
     id: '1',
     name: 'Desnúdate Mujer',
     name_short: 'Desnúdate Mujer',

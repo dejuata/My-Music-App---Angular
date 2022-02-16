@@ -24,7 +24,10 @@
     ],
     "paths": {
       "@core/*": ["src/app/core/*"],
-      "@env/*": ["src/enviroments/enviroment"],
+      "@auth/*": ["src/app/auth/*"],
+      "@utils/*": ["src/app/utils/*"],
+      "@app/*": ["src/app/*"],
+      "@env/*": ["src/enviroments/*"],
     }
   },
   "angularCompilerOptions": {

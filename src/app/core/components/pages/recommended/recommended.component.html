@@ -3,4 +3,6 @@
   <hr />
 </div>
 
-<app-track-list></app-track-list>
+<div *ngIf="loading">Cargando...</div>
+
+<app-track-list [tracks]="tracks" *ngIf="!loading"></app-track-list>

@@ -4,7 +4,20 @@
 
 export const environment = {
   production: false,
-  logoUrl: 'https://res.cloudinary.com/dnat0jmou/image/upload/v1643209622/logo_cpghqu.png'
+  clientId: 'f29b81501eda4c60b5160c2713017d3f',
+  authorizeUrl: 'https://accounts.spotify.com/authorize',
+  redirectUrl: 'http://localhost:4200/auth/redirect',
+  scopes: ['user-library-modify', 'user-library-read'],
+  logoUrl: 'https://res.cloudinary.com/dnat0jmou/image/upload/v1643209622/logo_cpghqu.png',
+  baseUrl: 'https://api.spotify.com/v1',
+  endpoints: {
+    recommendations: 'recommendations',
+    tracks: 'tracks',
+    me: 'me',
+    favorites: 'me/tracks',
+    checkFavorites: 'me/tracks/contains',
+    albums: 'albums'
+  }
 };
 
 /*

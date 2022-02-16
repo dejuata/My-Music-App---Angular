@@ -5,13 +5,15 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './components/pages/login/login.component';
 import { LogoComponent } from './components/atoms/logo/logo.component';
 import { LoginButtonComponent } from './components/atoms/login-button/login-button.component';
+import { RedirectComponent } from './components/pages/redirect/redirect.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     LogoComponent,
-    LoginButtonComponent
+    LoginButtonComponent,
+    RedirectComponent
   ],
   imports: [
     CommonModule,

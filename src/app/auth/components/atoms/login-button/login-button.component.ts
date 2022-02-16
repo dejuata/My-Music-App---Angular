@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { loginUrl } from '@utils/loginUrl';
 
 @Component({
   selector: 'app-login-button',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginButtonComponent implements OnInit {
 
-  url: string = '';
+  url: string;
 
-  constructor() { }
+  constructor() {
+    this.url = loginUrl();
+  }
 
   ngOnInit(): void {
   }
