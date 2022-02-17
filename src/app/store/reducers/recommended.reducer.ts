@@ -29,6 +29,8 @@ const _recommendedReducer = createReducer(
     }
   })),
 
+  on(actions.cleanRecommended, state => ({ ...state, ...initialState }))
+
 );
 
 export function recommendedReducer(state: any , action: Action) {

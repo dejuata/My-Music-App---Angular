@@ -14,3 +14,7 @@ export const loadRecommendedError = createAction(
   '[RECOMMENDED] LOAD RECOMMENDED ERROR',
   props<{ payload: any}>()
 );
+
+export const cleanRecommended = createAction(
+  '[RECOMMENDED] CLEAN RECOMMENDED',
+)

@@ -38,6 +38,7 @@ const _favoriteReducer = createReducer(
 
   on(actions.favoriteError, (state, { payload }) => ({ ...state, error: payload })),
 
+  on(actions.cleanFavorite, state => ({ ...state, ...initialState })),
 );
 
 export function favoriteReducer(state: any, action: Action) {

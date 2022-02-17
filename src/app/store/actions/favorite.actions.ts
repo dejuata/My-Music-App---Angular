@@ -34,3 +34,7 @@ export const favoriteError = createAction(
   props<{ payload: any}>()
 );
 
+export const cleanFavorite = createAction(
+  '[FAVORITES] CLEAN FAVORITE',
+);
+

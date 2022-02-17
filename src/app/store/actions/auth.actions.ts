@@ -15,3 +15,7 @@ export const loginFailure = createAction(
   '[AUTH] LOGIN FAILURE',
   props<{ payload: any }>()
 )
+
+export const logout = createAction(
+  '[AUTH] LOGOUT'
+)

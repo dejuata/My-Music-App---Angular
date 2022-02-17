@@ -1,6 +1,7 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import * as actions from '@app/store/actions/auth.actions';
 import { User } from '@app/models/user.model';
+import { state } from '@angular/animations';
 
 export interface AuthState {
   user: User,
@@ -25,7 +26,9 @@ const _authReducer = createReducer(
 
   on(actions.loginSuccess, (state, { user }) => ({ ...state, user: { ...user }, logged: true })),
 
-  on(actions.loginFailure, (state, { payload }) => ({ ...state, logged: false, error: payload }))
+  on(actions.loginFailure, (state, { payload }) => ({ ...state, logged: false, error: payload })),
+
+  on(actions.logout, (state) => ({ ...state, ...initialState }))
 
 );
 
