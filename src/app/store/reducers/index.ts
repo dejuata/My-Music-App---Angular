@@ -1,2 +1,3 @@
 export * from './auth.reducer';
-export * from './track.reducer';
+export * from './recommended.reducer';
+export * from './favorite.reducer';

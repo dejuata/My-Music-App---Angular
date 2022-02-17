@@ -13,7 +13,9 @@
 
   <div class="m-card-track__footer">
     <span>{{ track.duration | formatDuration }}</span>
-    <!-- <app-favorite-button></app-favorite-button> -->
-    <button (click)="setFavorite()">💚</button>
+    <app-favorite-button
+      (productClick)="setFavorite($event)"
+      [favorite]="track.favorite"
+    ></app-favorite-button>
   </div>
 </div>

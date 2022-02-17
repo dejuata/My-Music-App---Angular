@@ -20,8 +20,8 @@ import { TrackTableRowComponent } from '@core/components/atoms/track-table-row/t
 import { FavoriteButtonComponent } from '@core/components/atoms/favorite-button/favorite-button.component';
 import { TruncateStringPipe } from '@core/pipes/truncate-string.pipe';
 import { FormatDurationPipe } from '@core/pipes/format-duration.pipe';
-import { trackReducer } from '@app/store/reducers/track.reducer';
-import { TrackEffects } from '@app/store/effects/track.effects';
+import { reducersCoreModule } from '@app/store/core.reducer';
+import { CoreEffectsArray } from '@app/store/effects/index';
 
 
 @NgModule({
@@ -44,8 +44,8 @@ import { TrackEffects } from '@app/store/effects/track.effects';
   ],
   imports: [
     CommonModule,
-    StoreModule.forFeature('tracks', trackReducer),
-    EffectsModule.forFeature([ TrackEffects ]),
+    StoreModule.forFeature('coreModule', reducersCoreModule),
+    EffectsModule.forFeature( CoreEffectsArray ),
     CoreRoutingModule,
     FontAwesomeModule,
   ]

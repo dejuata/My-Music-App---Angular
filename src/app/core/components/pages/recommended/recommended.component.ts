@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { filter } from 'rxjs';
+import { filter, map } from 'rxjs';
 
 import { Track } from '@app/models/track.model';
-import { AppTrackState } from '@app/store/reducers';
-import { loadTracks } from '@app/store/actions';
+import { loadRecommended } from '@app/store/actions/recommended.actions';
+import { AppCoreModuleState, CoreModuleState } from '@app/store/core.reducer';
 
 @Component({
   selector: 'app-recommended',
@@ -17,18 +17,19 @@ export class RecommendedComponent implements OnInit {
   loading: boolean = false;
 
   constructor(
-    private store: Store<AppTrackState>
+    private store: Store<AppCoreModuleState>,
   ) { }
 
   ngOnInit(): void {
 
     this.loading = true;
 
-    this.store.dispatch( loadTracks() );
+    this.store.dispatch( loadRecommended() );
 
-    this.store.select('tracks')
+    this.store.select('coreModule')
       .pipe(
-        filter( state => state.loaded )
+        map( (state: CoreModuleState) => state.recommended ),
+        filter( recommended => recommended.loaded )
       )
       .subscribe( ({ tracks, loading }) => {
         this.tracks = tracks;

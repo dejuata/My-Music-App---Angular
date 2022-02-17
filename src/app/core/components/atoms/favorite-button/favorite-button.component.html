@@ -1,3 +1,7 @@
-<button class="a-favorite-button">
-  <fa-icon [icon]="faHeart" class="a-favorite-button__icon"></fa-icon>
+<button class="a-favorite-button" (click)="toggle()">
+  <fa-icon
+    [icon]="faHeart"
+    class="a-favorite-button__icon"
+    [class.a-favorite-button__icon--active]="favorite"
+  ></fa-icon>
 </button>

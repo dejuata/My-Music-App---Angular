@@ -13,10 +13,6 @@ const routes: Routes = [
     path: 'redirect',
     component: RedirectComponent
   },
-  // {
-  //   path: '**',
-  //   redirectTo: 'login'
-  // }
 ];
 
 @NgModule({

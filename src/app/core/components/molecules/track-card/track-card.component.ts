@@ -1,5 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { Track } from '@app/models/track.model';
+import { CoreModuleState } from '@app/store/core.reducer';
+import { setFavorite } from '@app/store/actions/favorite.actions';
+import { removeFavorite } from '../../../../store/actions/favorite.actions';
 
 @Component({
   selector: 'app-track-card',
@@ -10,26 +14,19 @@ export class TrackCardComponent implements OnInit {
 
   @Input() track!: Track;
 
-  // track = {
-  //   id: '1',
-  //   name: 'Desnúdate Mujer',
-  //   name_short: 'Desnúdate Mujer',
-  //   album: "Voy Pa'Encima",
-  //   artists: 'Frankie Ruiz',
-  //   duration: '4:47',
-  //   image: 'https://i.scdn.co/image/ab67616d00001e021386b29ab009dd27c398d141',
-  //   favorite: true
-  // };
-
-  constructor() { }
+  constructor(
+    private store: Store<CoreModuleState>
+  ) { }
 
   ngOnInit(): void {
   }
 
-  setFavorite() {
-    console.log('click track', this.track.id)
-    this.track.setFavorite(true);
-    console.log('click track1', this.track)
+  setFavorite(favorite: boolean) {
+    if ( favorite ) {
+      this.store.dispatch( setFavorite({ id: this.track.id }));
+    } else {
+      this.store.dispatch( removeFavorite({ id: this.track.id }));
+    }
   }
 
 }

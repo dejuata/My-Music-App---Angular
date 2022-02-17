@@ -24,9 +24,4 @@ export class Track {
     );
   }
 
-  public setFavorite( favorite: boolean) {
-    this.favorite = favorite;
-  }
-
-
 }
